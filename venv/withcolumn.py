@@ -1,6 +1,7 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StringType, StructField, IntegerType, DoubleType
 from pyspark.sql.functions import col
+from pyspark.sql.functions import lit
 
 if __name__ == "__main__":
     spark = SparkSession.builder.master("local[*]").appName("With Column").getOrCreate()
@@ -30,8 +31,10 @@ if __name__ == "__main__":
     #assignment
     #add new column state with value MH
 
+    df.withColumn("state",  lit("MH")).show()
+
     #rename column
     #df.withColumnRenamed("name", "first_name").printSchema()
 
     #drop column
-    df.drop("city").printSchema()
+    #df.drop("city").printSchema()
