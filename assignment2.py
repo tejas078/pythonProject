@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, explode, split
+from pyspark.sql.functions import *
 
 if __name__ == '__main__':
     spark = SparkSession.builder.master("local[*]").appName("Test1").getOrCreate()
