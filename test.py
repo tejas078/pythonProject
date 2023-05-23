@@ -167,6 +167,6 @@ if __name__ == '__main__':
     df.select(max("Amount")).show()
     df.cache()
     df.unpersist()
-    print(df.storageLevel.useMemory)
+    # print(df.storageLevel.useMemory)
     # or
-    print(df.is_cached)
+    # print(df.is_cached)
