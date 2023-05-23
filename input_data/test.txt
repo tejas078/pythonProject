@@ -1,0 +1,6 @@
+1,"Ram","male","pune",10000
+2,"Shyam","male","mumbai",20000
+3,"Kiran","female","nagar",30000
+4,"Ajay","male","pune",40000
+5,"Ankita","female","natepute",35000
+6,"Balaji","male","Nagar",20000

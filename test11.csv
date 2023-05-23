@@ -1,0 +1,9 @@
+source,destination,distance
+A,B,10
+B,A,10
+A,B,10
+C,D,30
+E,F,200
+G,V,45
+G,V,45
+B,H,10

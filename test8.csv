@@ -1,0 +1,7 @@
+Customer No,Card type,Date,Category,Transaction Type,Amount
+1000531, Checking, 1/16/2018, Utilities,debit, 60
+1000531, Checking, 1/19/2018, Paycheck,credit, 2000
+1000531, Platinum Card, 1/20/2018, Shopping,debit, 50.21
+1000531, Platinum Card, 1/22/2018, Credit Card Payment,credit, 554.99
+1000531, Silver Card, 1/22/2018, Credit Card Payment,credit, 309.81
+1000531, Checking, 1/22/2018, Credit Card Payment,debit, 554.99

@@ -1,0 +1,160 @@
+2023-05-10 23:30:48,990 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-10 23:32:06,780 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-10 23:32:30,643 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-10 23:34:07,590 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2023-05-10 23:35:09,765 - __main__ - INFO - File uploaded to bucket dattasirtask2 successfully
+2023-05-10 23:35:09,774 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-10 23:39:54,130 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-11 02:40:44,054 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2023-05-11 02:41:43,177 - __main__ - INFO - File uploaded to bucket dattasirtask2 successfully
+2023-05-11 02:41:43,197 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-11 12:40:51,843 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2023-05-11 12:41:15,953 - __main__ - INFO - File uploaded to bucket dattasirtask2 successfully
+2023-05-11 12:41:15,967 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-11 15:44:28,116 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2023-05-11 15:44:52,409 - __main__ - INFO - File uploaded to bucket dattasirtask2 successfully
+2023-05-11 15:44:52,423 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-19 16:49:49,484 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2023-05-19 16:49:51,055 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "C:\Users\Tejas\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2023-05-19 16:49:51,091 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-19 16:49:51,091 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "C:\Users\Tejas\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2023-05-19 16:49:53,168 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-19 16:49:53,168 - py4j.clientserver - INFO - Error while receiving.
+Traceback (most recent call last):
+  File "C:\Users\Tejas\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "C:\Users\Tejas\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\pyspark\context.py", line 362, in signal_handler
+    self.cancelAllJobs()
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\pyspark\context.py", line 1447, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\java_gateway.py", line 1320, in __call__
+    answer = self.gateway_client.send_command(command)
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\java_gateway.py", line 1053, in send_command
+    response = self.send_command(command, binary=binary)
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\java_gateway.py", line 1036, in send_command
+    connection = self._get_connection()
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 284, in _get_connection
+    connection = self._create_new_connection()
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 291, in _create_new_connection
+    connection.connect_to_java_server()
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 438, in connect_to_java_server
+    self.socket.connect((self.java_address, self.java_port))
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+2023-05-19 16:49:53,169 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-19 16:49:53,169 - root - ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "C:\Users\Tejas\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "C:\Users\Tejas\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\pyspark\context.py", line 362, in signal_handler
+    self.cancelAllJobs()
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\pyspark\context.py", line 1447, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\java_gateway.py", line 1320, in __call__
+    answer = self.gateway_client.send_command(command)
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\java_gateway.py", line 1053, in send_command
+    response = self.send_command(command, binary=binary)
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\java_gateway.py", line 1036, in send_command
+    connection = self._get_connection()
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 284, in _get_connection
+    connection = self._create_new_connection()
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 291, in _create_new_connection
+    connection.connect_to_java_server()
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 438, in connect_to_java_server
+    self.socket.connect((self.java_address, self.java_port))
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "C:\Users\Tejas\PycharmProjects\pythonProject\venv\lib\site-packages\py4j\clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2023-05-19 16:49:53,170 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-19 16:49:53,170 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-19 16:49:55,197 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-19 16:49:55,235 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-19 16:49:55,278 - py4j.clientserver - INFO - Closing down clientserver connection
+2023-05-19 16:50:18,188 - py4j.clientserver - INFO - Closing down clientserver connection

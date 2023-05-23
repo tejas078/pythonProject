@@ -1,32 +1,33 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType
 from pyspark.sql.functions import *
-from pyspark.sql import Window
-
 if __name__ == '__main__':
-    spark = SparkSession.builder.master("local[*]").appName("Aggregate Function").getOrCreate()
+    spark = SparkSession.builder.master("local[*]").appName("Salary").getOrCreate()
 
-    schema_data = StructType([
-        StructField("id", IntegerType(), False),  # nullable false
-        StructField("name", StringType()),
-        StructField("gender", StringType()),
-        StructField("city", StringType()),
-        StructField("salary", DoubleType())
-    ])
+    data = [(1,"Ram",25,20000),(2,"Sham",29,30000),(3,"Kiran",31,10000),(4,"Mina",34,14000)]
+    header = ["id","Name","Age","Salary"]
 
-    df = spark.read.load(r"C:\Users\Tejas\PycharmProjects\pythonProject\input_data\employee.csv",
-                         format="csv", schema=schema_data)
-    # df.select(avg("salary")).show()
-    # df.select(sum("salary")).show()
-    # df.select(max("salary")).show()
-    # df.select(min("salary")).show()
-    # df.select(count("salary")).show()
+    input_rdd = spark.sparkContext.parallelize(data)
+    input_df = input_rdd.toDF(header)
+    # input_df.show()
+    # input_df.printSchema()
 
-    windowspec = Window.partitionBy("gender").orderBy("salary")
+    # get employee name who has max salary
+    # input_df.select(max(input_df.Salary)).show()
 
-    # df.withColumn("row_number", row_number().over(windowspec)).show()
-    # df.withColumn("rank", rank().over(windowspec)).show()
-    # df.withColumn("dense_rank", dense_rank().over(windowspec)).show()
+    # get sum of salary from the file
+    # input_df.select(sum(col("Salary"))).show()
 
-    df.withColumn("count", count(col("salary")).over(windowspec)).show()
-    # df.withColumn("lag", lag("salary", 2).over(windowspec)).show()
+    # get employee name, age who has age greater than 30
+    # input_df.filter(input_df.Age>30).select("Name","Age").show()
+    # input_df.select(aggregate(struct(input_df.Name,max(input_df.Salary)))).groupBy(input_df.Name).show()
+
+    # input_df1 = input_df.select(max(input_df.Salary).alias("Salary"))
+    # input_df.join(input_df1, "Salary").select("Name", "Salary").show()
+
+
+    input_df.createOrReplaceTempView("table")
+    spark.sql("select * from table").show()
+
+    input_df.select("*").where(col("Age")==29).show()
+    input_df.filter(col("Salary")>20000).show()
+    input_df.withColumn("Minus_Salary",col("Salary")-10000).drop("Name").show()
