@@ -165,7 +165,7 @@ if __name__ == '__main__':
     df = spark.read.option("header","true").option("inferschema","true").option("delimiter",",").csv(r"C:\Users\Tejas\PycharmProjects\pythonProject\test8.csv")
     df.agg(max(col("Amount"))).show()
     df.select(max("Amount")).show()
-    df.cache()
+    # df.cache()
     df.unpersist()
     # print(df.storageLevel.useMemory)
     # or
